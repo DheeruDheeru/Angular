@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Todo } from 'src/Model/Todo';
-import { TodoService } from '../../servies/todo.service'
+import { TodoService } from '../../servies/todo.service';
 
 @Component({
   selector: 'app-todos',
@@ -15,6 +15,13 @@ export class TodosComponent implements OnInit {
   ngOnInit(): void {
     // this.todos=this.todoService.getTodos();
     this.todoService.getTodos().subscribe(todo=>{
+      this.todos = todo;
+    });
+  }
+  
+  ngOnDelete(): void {
+      //  this.todos=this.todoService.getTodos();
+      this.todoService.getTodos().subscribe(todo=>{
       this.todos = todo;
     });
   }
