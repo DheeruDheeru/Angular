@@ -1,0 +1,2 @@
+git remote add origin https://github.com/DheeruDheeru/Angular.git
+git push -u origin master
